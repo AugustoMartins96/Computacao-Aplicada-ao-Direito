@@ -12,12 +12,16 @@
 20/08/2024
   Questão 1:
     a) Existem diferentes linguagens que possivelmente podem ser aplicadas no âmbito computacional. Para o exercício em questão citarei três popularmente conhecidas: Python, JavaScript e C. 
-      A primeira delas representa uma linguagem de programação de alto nível, porém relativamente fácil de aprender - portando uma linguagem clara e concisa. Ela é amplamente usada em automação, ciência de dados e desenvolvimento de inteligências artificiais. Um exemplo de sua  aplicação pode ser realizado com a frase "Olá, forasteiro", que, na linguagem Python, pode ser representada com: print("Olá, forasteiro"). 
-      A segunda é uma linguagemn de programação leve, baseada em scripts e frequentemente usada para desenvolvimento web. Ela é crucial para o navegador, e essencial para criar páginas web interativas. Um exemplo de sua aplicação pode ser realizado com a frase "Olá, forasteiro", que, na linguagem JavaScript, pode ser representada com: console.log("Olá, forasteiro");
+      A primeira delas representa uma linguagem de programação de alto nível, porém relativamente fácil de aprender - portando uma linguagem clara e concisa. Ela é amplamente usada em automação, ciência de dados e desenvolvimento de inteligências artificiais. Um exemplo de sua  aplicação pode ser realizado com a frase "Olá, forasteiro", que, na linguagem Python, pode ser representada com: print("Olá, forasteiro").
+        https://github.com/AugustoMartins96/Computacao-Aplicada-ao-Direito/blob/main/Python.png
+      A segunda é uma linguagemn de programação leve, baseada em scripts e frequentemente usada para desenvolvimento web. Ela é crucial para o navegador, e essencial para criar páginas web interativas. Um exemplo de sua aplicação pode ser realizado com a frase "Olá, forasteiro", que, na linguagem JavaScript, pode ser representada com: console.log("Olá, forasteiro") 
+        (https://github.com/AugustoMartins96/Computacao-Aplicada-ao-Direito/blob/main/JavaScript.png);
       A terceira é uma linguagem de baixo nível com controle direto sobre a memória, amplamente usada para sistemas operacionais, desenvolvimento de drivers e aplicações de alto desempenho. Ela é compilada, o que significa que o código-fonte precisa ser convertido em um executável por um compulador antes de ser executado. Um exemplo de sua aplicação pode ser realizado com a frase "Olá, forasteiro", que, na linguagem C, pode ser representada com: 
         #include <stdio.h>.
         int main () {
             printf ("Olá, forasteiro\n");
             return 0;
         }
+
+        (https://github.com/AugustoMartins96/Computacao-Aplicada-ao-Direito/blob/main/C.png)
 
