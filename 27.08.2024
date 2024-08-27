@@ -1,0 +1,29 @@
+Prova de execução:
+
+1. amigos = {
+    "Carlos": "disponível",
+    "Fernanda": "disponível",
+    "João": "ocupado",
+    "Maria": "disponível",
+    "Pedro": ""
+}
+
+# Local do convite
+local = "ximeninho"
+
+# Mensagem do convite
+convite = f"Bora tomar uma no {local}?"
+
+# Estrutura de repetição: iterando sobre a lista de amigos
+for amigo, disponibilidade in amigos.items():
+    print(f"E aee, {amigo}!")
+
+    # Estrutura de tomada de decisão: verificando a disponibilidade
+    if disponibilidade == "disponível":
+        print(f"{convite} Bora!")
+    elif disponibilidade == "ocupado":
+        print(f"{convite} Aa... deixa para dar banho no peixe uma outra hora po")
+    else:
+        print(f"{convite} E ae? Bora ou bora?")
+
+    print("")  # Linha em branco para separar as mensagens de cada amigo
