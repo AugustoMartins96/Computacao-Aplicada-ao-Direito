@@ -3,7 +3,7 @@ def extrair_vogais(texto):
     resultado = ''.join([char for char in texto if char in vogais])
     return resultado
 
-# Exemplo de uso
+# Exemplo
 frase = "Quero ganhar na mega-sena"
 vogais_extraidas = extrair_vogais(frase)
 print("Vogais extraídas:", vogais_extraidas)
