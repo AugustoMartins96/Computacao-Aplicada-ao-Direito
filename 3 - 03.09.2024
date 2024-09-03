@@ -1,0 +1,24 @@
+def bubble_sort_cartas(cartas):
+    n = len(cartas)
+    for i in range(n):
+        # Flag para detectar se houve troca
+        trocou = False
+        for j in range(0, n-i-1):
+            # Comparar cartas usando uma ordem predefinida
+            if valor_carta(cartas[j]) > valor_carta(cartas[j+1]):
+                # Trocar cartas se estiverem na ordem errada
+                cartas[j], cartas[j+1] = cartas[j+1], cartas[j]
+                trocou = True
+        # Se nenhuma troca aconteceu, a lista já está ordenada
+        if not trocou:
+            break
+    return cartas
+
+def valor_carta(carta):
+    ordem = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
+    return ordem.get(carta, 0)
+
+# Exemplo de uso
+baralho = ["10", "A", "5", "K", "Q", "2", "J", "9"]
+baralho_ordenado = bubble_sort_cartas(baralho)
+print("Baralho ordenado:", baralho_ordenado)
