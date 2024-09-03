@@ -1,0 +1,9 @@
+def extrair_vogais(texto):
+    vogais = 'aeiouAEIOUáàãéíóõú'
+    resultado = ''.join([char for char in texto if char in vogais])
+    return resultado
+
+# Exemplo de uso
+frase = "Quero ganhar na megasena"
+vogais_extraidas = extrair_vogais(frase)
+print("Vogais extraídas:", vogais_extraidas)
