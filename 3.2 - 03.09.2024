@@ -4,6 +4,6 @@ def extrair_vogais(texto):
     return resultado
 
 # Exemplo de uso
-frase = "Quero ganhar na megasena"
+frase = "Quero ganhar na mega-sena"
 vogais_extraidas = extrair_vogais(frase)
 print("Vogais extraídas:", vogais_extraidas)
