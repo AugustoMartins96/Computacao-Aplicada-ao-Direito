@@ -1,0 +1,38 @@
+Código 1)
+  def gravar_nome_em_arquivo(nome_arquivo):
+    nome = input("Informe seu nome: ")
+    
+    with open(nome_arquivo, 'w') as arquivo:
+        arquivo.write(nome)
+    
+    print(f"Nome '{nome}' gravado no arquivo '{nome_arquivo}'.")
+
+Código 2)
+  def imprimir_conteudo_arquivo(nome_arquivo):
+    with open(nome_arquivo, 'r') as arquivo:
+        conteudo = arquivo.read()
+    
+    print(f"Conteúdo do arquivo '{nome_arquivo}':")
+    print(conteudo)
+    
+Código 3)
+  def copiar_conteudo_arquivo(arquivo_origem, arquivo_destino):
+    with open(arquivo_origem, 'r') as origem:
+        conteudo = origem.read()
+    
+    with open(arquivo_destino, 'w') as destino:
+        destino.write(conteudo)
+    
+    print(f"Conteúdo do arquivo '{arquivo_origem}' copiado para '{arquivo_destino}'.")
+    
+Código 4)
+  def mostrar_nome_por_numero(nome_arquivo, numero):
+    with open(nome_arquivo, 'r') as arquivo:
+        linhas = arquivo.readlines()
+    
+    if 1 <= numero <= len(linhas):
+        nome = linhas[numero - 1].strip()  # Subtrai 1 para ajustar o índice da lista
+        print(f"Nome correspondente ao número {numero}: {nome}")
+    else:
+        print(f"Número {numero} fora do intervalo válido. O arquivo tem {len(linhas)} linhas.")
+    
