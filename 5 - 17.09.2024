@@ -1,38 +1,90 @@
 Código 1)
-  def gravar_nome_em_arquivo(nome_arquivo):
-    nome = input("Informe seu nome: ")
+
+def salvar_nome_em_arquivo():
+    # Pede o nome do usuário
+    nome = input("Digite seu nome: ")
     
-    with open(nome_arquivo, 'w') as arquivo:
+    # Abre o arquivo para escrita ('w' cria um novo arquivo ou sobrescreve um existente)
+    with open("nome_usuario.txt", "w") as arquivo:
+        # Grava o nome no arquivo
         arquivo.write(nome)
     
-    print(f"Nome '{nome}' gravado no arquivo '{nome_arquivo}'.")
+    print("Nome salvo com sucesso!")
+
+# Chama a função para testar
+salvar_nome_em_arquivo()
 
 Código 2)
-  def imprimir_conteudo_arquivo(nome_arquivo):
-    with open(nome_arquivo, 'r') as arquivo:
-        conteudo = arquivo.read()
+
+  def imprimir_conteudo_arquivo():
+    # Pede o nome do arquivo ao usuário
+    nome_arquivo = input("Digite o nome do arquivo para ler: ")
     
-    print(f"Conteúdo do arquivo '{nome_arquivo}':")
-    print(conteudo)
+    try:
+        # Abre o arquivo para leitura ('r' é o modo de leitura)
+        with open(nome_arquivo, "r") as arquivo:
+            # Lê o conteúdo do arquivo
+            conteudo = arquivo.read()
+            # Imprime o conteúdo
+            print(conteudo)
+    except FileNotFoundError:
+        print("Arquivo não encontrado. Verifique o nome e tente novamente.")
+
+# Chama a função para testar
+imprimir_conteudo_arquivo()
     
 Código 3)
-  def copiar_conteudo_arquivo(arquivo_origem, arquivo_destino):
-    with open(arquivo_origem, 'r') as origem:
-        conteudo = origem.read()
+
+ def copiar_conteudo_arquivo():
+    # Pede o nome do arquivo de origem
+    nome_arquivo_origem = input("Digite o nome do arquivo de origem: ")
     
-    with open(arquivo_destino, 'w') as destino:
-        destino.write(conteudo)
+    # Pede o nome do novo arquivo
+    nome_arquivo_destino = input("Digite o nome do novo arquivo: ")
     
-    print(f"Conteúdo do arquivo '{arquivo_origem}' copiado para '{arquivo_destino}'.")
+    try:
+        # Abre o arquivo de origem para leitura
+        with open(nome_arquivo_origem, "r") as arquivo_origem:
+            conteudo = arquivo_origem.read()
+        
+        # Abre o novo arquivo para escrita
+        with open(nome_arquivo_destino, "w") as arquivo_destino:
+            # Escreve o conteúdo no novo arquivo
+            arquivo_destino.write(conteudo)
+        
+        print("Conteúdo copiado com sucesso!")
+    except FileNotFoundError:
+        print("Arquivo de origem não encontrado. Verifique o nome e tente novamente.")
+
+# Chama a função para testar
+copiar_conteudo_arquivo()
     
 Código 4)
-  def mostrar_nome_por_numero(nome_arquivo, numero):
-    with open(nome_arquivo, 'r') as arquivo:
-        linhas = arquivo.readlines()
+
+ def procurar_nome_por_numero():
+    # Pede o nome do arquivo de exemplo
+    nome_arquivo = input("Digite o nome do arquivo de exemplo: ")
     
-    if 1 <= numero <= len(linhas):
-        nome = linhas[numero - 1].strip()  # Subtrai 1 para ajustar o índice da lista
-        print(f"Nome correspondente ao número {numero}: {nome}")
-    else:
-        print(f"Número {numero} fora do intervalo válido. O arquivo tem {len(linhas)} linhas.")
+    try:
+        # Abre o arquivo para leitura
+        with open(nome_arquivo, "r") as arquivo:
+            linhas = arquivo.readlines()
+        
+        # Pede o número ao usuário
+        numero = int(input("Digite o número para buscar: "))
+        
+        # Verifica se o número está dentro do intervalo de linhas do arquivo
+        if 1 <= numero <= len(linhas):
+            # Imprime o nome correspondente ao número
+            print(f"Nome correspondente ao número {numero}: {linhas[numero - 1].strip()}")
+        else:
+            print("Número fora do intervalo. Verifique o número e tente novamente.")
+    
+    except FileNotFoundError:
+        print("Arquivo não encontrado. Verifique o nome e tente novamente.")
+    except ValueError:
+        print("Entrada inválida. Por favor, insira um número inteiro.")
+
+# Chama a função para testar
+procurar_nome_por_numero()
     
